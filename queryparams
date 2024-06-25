@@ -1,0 +1,13 @@
+let express =require("express")
+let app = express()
+
+app.use(express.json)
+
+ app.get('/gethello',(req,res)=>{
+    req.send("my name is het")
+ })
+app.listen(8000,(err)=>{
+    if(!err){
+        console.log("server running on 8000")
+    }
+})
